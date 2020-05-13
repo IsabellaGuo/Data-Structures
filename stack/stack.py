@@ -13,7 +13,7 @@ return elements in Last In First Out order.
 from linked_lists import Node, LinkedList
 
  # Using arrays
-class Stack:
+class ArrStack:
     def __init__(self):
         self.size = 0
         self.storage = []
@@ -31,7 +31,7 @@ class Stack:
          return None
 
 # Using linked list
-class LLStack:
+class Stack:
     def __init__(self):
         self.size = 0
         self.storage = LinkedList()
@@ -45,5 +45,6 @@ class LLStack:
         self.storage.add_to_head(value)
 
     def pop(self):
-        self.size -= 1
-        return self.storage.remove_from_head()
+        if self.size is not 0:
+         self.size -= 1
+         return self.storage.remove_from_head()
